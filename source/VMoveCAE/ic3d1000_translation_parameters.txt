@@ -1,0 +1,59 @@
+##########################################################################
+#                                                                         
+# VMoveCAE - Creates cax files from native CAE files                 
+# Copyright (C) Visual Collaboration Technologies Inc.               
+#                                                                         
+##########################################################################
+
+[VMoveCAE]
+    version = 2.0
+ 
+    [translation]
+        model file = "G:\Models\CFD\Public\Fluent\ic3d1000\ic3d1000.cas"
+        results file = "G:\Models\CFD\Public\Fluent\ic3d1000\ic3d1000.dat"
+        output file = "G:\Models\CFD\Public\Fluent\ic3d1000\ic3d1000.cax"
+ 
+        [defaults]
+            parts = filter                   # filter unspecified parts
+            results = filter                 # filter unspecified results
+        []
+        [preferences]
+            mid-nodes = turn on
+        []
+        [part]
+            name = cyl-wall-layer
+            id = 47
+        []
+        [part]
+            name = cyl-wall-deform
+            id = 30
+        []
+        [part]
+            name = piston
+            translate = false
+        []
+        [result]
+            name = Pressure
+            translate = true
+        []
+        [result]
+            name = Temperature
+        []
+        [result]
+            name = Mach Number
+        []
+        [cut-section]
+            plane equation = "X+2.4Y=12.4"
+        []
+        [iso-surface]
+            result = Velocity
+            derived type = Magnitude
+            value = 20
+        []
+        [field-line]
+            from = "inlet"
+            result = "Velocity"
+            number of lines = 50
+        []
+    []
+[]

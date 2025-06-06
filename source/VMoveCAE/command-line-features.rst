@@ -1,0 +1,22 @@
+Command Line Arguments for Creating Features
+=============================================
+
+The command line arguments available in VMoveCAE to create cut-sections, iso-surfaces and flow lines are given below. 
+
+
+#. **--cut-sections=SECTION_LIST :** Creates cut-sections defined in SECTION_LIST 
+
+   Example: --cut-sections="2.4X+0.6Y-3.2Z=20.6, 0.2X- 
+   1.4Y+1.2Z=32.4" 
+
+#. **--iso-surfaces=ISO_SURFACE_LIST :** Creates iso-surfaces specified in ISO_SURFACE_LIST To specify a derived type, append the derived type name to the result name.  For example, "Stress X-component" can be used to create iso-surface for the X-component of the Stress result. 
+
+   Example: --iso-surfaces="Mach Number, Velocity Magnitude" 
+
+#. **--flow-lines=FLOW_LINE_LIST :** Creates flow-lines specified in FLOW_LINE_LIST. Multiple flow-lines can be specified separated by commas. Each flow line specification involves the specification of the result as well as the specification of the seed point or the part name.  
+
+   For example, to create 50 flow-lines of velocity start from the part "inlet", users need to specify [Velocity, inlet, 50] 
+
+  Example: --flow-lines="[Velocity, inlet, 50]"
+
+  It is possible to skip specifying the number of flow-lines. In such a scenario, zero is used as the number of flow-lines. These variables are separated by commas and enclosed in square braces. 

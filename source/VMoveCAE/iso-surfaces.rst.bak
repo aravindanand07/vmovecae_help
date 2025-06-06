@@ -1,0 +1,45 @@
+Creating and Editing ISO-Surfaces
+=====================================
+
+VMoveCAE provides the ability to create iso-surfaces. This module describes the procedure for creating iso-surfaces. 
+
+ #. Start VMoveCAE and load a result file. For this example,beam.rst file found in the samples directory is used.
+ 
+ #. Click on the **Add Iso-Surface** icon to create iso-surface.
+
+    Note: Iso-Surfaces can be created for scalar results only. For vector, 6-DOF and tensor results, users can create iso-surfaces for their scalar derived types. The “Add Iso-Surface” icon is enabled only for these files.
+  
+        |Scalar Result Chosen|
+
+ #. After clicking on  **Add Iso-Surface** the Iso-Surface window opens. The result for which the iso-surface is created is shown in the Iso-Surface window and its value is displayed in a text area which can be altered as desired. 
+
+        |Adding first Iso-Surface|
+
+
+ #. To add an iso-surface, enter an iso-surface value say “10” in the text area and click on **Add**. This will create the “Strain Energy = 10” iso-surface under the **Features** tree as shown in the below image. 
+
+
+ #. To add a second iso-surface for the same result, enter 25 in the text area and click **Add.**
+
+        |Added second iso-surface|
+
+ #. To change the properties of “ Strain Energy= 25” iso-surface, expand the **Stress** tree to display its derived types. Select **Von Mises**. This will change the iso-surface label to “Stress - Von Mises”. Enter a value of 120 and click apply.
+ 
+        |Changing the second iso-surface|
+
+    The iso-surface “Strain Energy = 25” is now changed to “Stress - Von Mises = 120”. 
+
+        |Changed the second iso-surface|
+
+ #. Click on Save CAX to Translate and create a CAX file. Open it in Pro or Presenter to visualize the iso-surface. If the iso-surface is out of bounds and not cutting the geometry then no iso-surface will be created. 
+
+
+
+
+.. |Scalar Result Chosen| image:: images/iso-scalar-chosen.png
+.. |Adding first Iso-Surface| image:: images/iso-adding-first.png
+.. |First Iso-Surface| image:: images/iso-first-added.png
+.. |Added second iso-surface| image:: images/iso-second-added.png
+.. |Changing the second iso-surface| image:: images/iso-changing-second.png
+.. |Changed the second iso-surface| image:: images/iso-changed-second.png
+

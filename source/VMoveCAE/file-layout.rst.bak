@@ -1,0 +1,14 @@
+VMoveCAE Files
+==============
+
+The files of VMoveCAE are found at “%VCOLLAB_DIR%\VMOVECAE64”.The details of the files and folders are given below. 
+
+
+-  **VMoveCAE.exe**: This is the main executable file to launch VMoveCAE on windows. It provides a GUI to the user to load CAE files, translate them to CAX files and work on them.
+-  **VMoveCAEBatch.exe**: This executable file launches the VMoveCAE console. This is a batch application used to create CAX files with no user intervention. It provides no GUI and uses the command line arguments to derive the translation parameters. 
+-  **CaeInfo.exe**: This executable file launches the CAE information console. CaeInfo.exe can be used to generate metadata from CAE files. The metadata is written in XML form.
+-  **CaxInfo.exe**: This application file launches CaxInfo console. CaxInfo can be used to generate metadata from CAX files in XML form. 
+-  **Help**: VMoveCAE help and release documents are found in this folder.
+-  **Samples**: This folder contains sample CAE files. These sample files can be used by the user to learn and test VMoveCAE. All the files that are used in the VMoveCAE tutorials can be found here.
+-  **library.zip, \*.dll, \*.pyd, VMoveCAE.ico**: These files are runtime dependencies for VMoveCAE executables.
+

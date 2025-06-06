@@ -1,0 +1,40 @@
+Controlling Result Translation Properties
+==========================================
+VMoveCAE converts all the results into nodal values by default before writing into CAX files. However, the user can select elemental and element nodal results and change their translation properties to write the elemental values. 
+
+This module shows how to change the result translation properties.
+
+1. Start VMoveCAE and load a CAE file. In this example bracket.op2 file found at VCollab\Samples\Native CAE Files\ file is used. 
+
+2. Select a Result from the List. For this example, **Stress(All Sections**) is selected. This enables the **Result Properties** icon in the toolbar.
+
+  |Select a Relsult|
+
+3. Click on the **“Result Properties”** icon to open the Result Properties window.
+
+  |Result Properties Window|
+
+4. Change the **Result** type to **Elemental** and click **Apply**.
+
+ All results except **Element Thickness**, are averaged to their nodal values and written to the CAX file by default. To write elemental values instead of nodal values, change the result type to **Elemental** in the **Result Properties** window. This change in setting is considered only when the result in the CAE file is defined for elements, element nodes or basis points. Nodal results are always written without conversion to elemental results.
+
+  |Change Result Properties|
+
+
+5. To change other results to Elemental, the same process (Steps 2 to 4) can be followed by selecting  the respective **Results**.
+
+ Note: The result Element Thickness is written as Elemental by default.
+
+6. Once the parameters have been changed, save the CAX file and visualize the Elemental results in VCollab viewers. 
+
+7. **Sections and Layers:** Please note that, for results that are available at multiple sections, VMoveCAE allows the user to select the desired sections or aggregates that need to be written to the CAX file in the “Result Properties” window.
+
+   |Section Layer Window|
+
+
+
+.. |Select a Relsult| image:: images/result-properties-enabled.png
+.. |Result Properties Window| image:: images/result-properties-window.png
+.. |Change Result Properties| image:: images/result-properties-change.png
+.. |Section Layer Window| image:: images/section-layer-window.png
+

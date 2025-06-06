@@ -1,0 +1,259 @@
+
+.wy-nav-content {
+   max-width: 100%;
+}
+
+
+.wy-side-nav-search { 
+    position: fixed;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+
+   background-color: red;
+   color:white;
+   position: fixed;
+   width:300px;
+   z-index: 1000;
+   margin-top: -45px;
+   margin-bottom: 50px;
+}
+
+.wy-menu-vertical li.current a,
+.wy-menu-vertical li.toctree-l1.current > a,
+.wy-menu-vertical li.toctree-l2.current > a,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l4 > a {
+   background-color: #99bbc4;
+   border-bottom: none;
+   color: black;
+
+}
+
+.wy-menu-vertical a:hover,
+.wy-menu-vertical li.current > a:hover {
+   background-color: rgba(153, 187, 196, 0.3);
+}
+
+.wy-menu-vertical li.toctree-l1 > a:hover,
+.wy-menu-vertical li.toctree-l2 > a:hover
+{
+
+   background-color: rgba(153, 187, 196, 0.6);
+}
+
+.wy-menu-vertical li.toctree-l1 > a:hover,
+.wy-menu-vertical li.toctree-l1.current > a:hover,
+.wy-menu-vertical li.toctree-l2.current > a:hover,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a:hover,
+.wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a:hover {
+
+   background-color: rgba(153, 187, 196, 0.6);
+}
+
+.wy-menu-vertical li.current a:active,
+.wy-menu-vertical li.toctree-l1.current>a,
+.wy-menu-vertical li.toctree-l2.current > a:active,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a:active,
+.wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a:active {
+   background-color: #99bbc4;
+   border-bottom: none;
+}
+
+.wy-menu-vertical {
+
+   margin-top: 200px;
+   background-color:#CBE0E5;
+   max-height: calc(100% - 150px);
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+.wy-menu-vertical a {
+
+   color:black;
+}
+
+.wy-nav-side {
+   background-color:#CBE0E5;
+}
+
+.float-left {
+
+   float: right;
+   margin-right: 20px;
+}
+
+hr {
+
+   margin: 0px;
+   margin-top:15px ;
+}
+
+
+.rst-header {
+
+      position: fixed;
+      width: calc(100% - 380px);
+      margin-left: 20px;
+      background-color: #fdfdfd;
+      top: 0px;
+
+}
+
+.wy-breadcrumbs {
+
+   padding-top: 10px;
+}
+
+.wy-breadcrumbs {
+
+   padding-top: 10px;
+}
+.rst-breadcrumbs-buttons {
+
+   margin-top: -30px;
+}
+
+
+.btn {
+
+   border:none;
+   box-shadow: none;
+   outline: none;
+}
+
+
+.btn-neutral {
+
+   background-color: #fdfdfd !important;
+   border:none;
+   outline: none !important;
+   
+   
+   box-shadow: none !important;
+}
+.btn-neutral:hover {
+
+   background-color: #fdfdfd !important;
+}
+
+.rst-content {
+
+   margin-top: 60px;
+  }
+
+
+
+/* Scrollbar styling */
+
+.wy-menu.wy-menu-vertical::-webkit-scrollbar {
+   width:5px;
+
+}
+.wy-menu.wy-menu-vertical::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+}
+.wy-menu.wy-menu-vertical::-webkit-scrollbar-thumb {
+   background: #888; 
+}
+/* Firefox does the dimming on hover automatically. We emulate it for Webkit-based browsers. */
+.wy-menu.wy-menu-vertical::-webkit-scrollbar-thumb:hover {
+   background: #555; 
+}
+
+/* firefox */
+
+
+.wy-menu.wy-menu-vertical {
+   scrollbar-color: rgb(70, 70, 70) rgb(228, 228, 228);
+   scrollbar-width: thin;
+ }
+
+ .rst-versions {
+
+   display: none;
+ }
+ .version {
+	 color:black;
+ }
+
+
+ @media screen and (max-width:910px) {
+
+
+.wy-body-for-nav{background:#fcfcfc}
+.wy-nav-top{display:block}
+.wy-nav-side{left:-300px}
+.wy-nav-side.shift{width:85%;left:0}
+.wy-menu.wy-menu-vertical,.wy-side-nav-search,.wy-side-scroll{width:auto}
+.wy-nav-content-wrap{margin-left:0}
+.wy-nav-content-wrap 
+.wy-nav-content{padding:1.618em}
+.wy-nav-content-wrap.shift{position:fixed;min-width:100%;left:85%;top:0;height:100%;overflow:hidden}  
+
+   .wy-side-nav-search { 
+      position: absolute;
+      width: 100%;
+   }
+   .wy-side-scroll {
+
+      overflow: hidden;
+   }
+
+   .rst-header {
+
+      width:100%;
+      margin-left: 0px;
+      margin-top: 30px;
+      position:absolute;
+   
+   }
+   .wy-menu-vertical {
+
+      margin-top: 178px;
+   
+      
+   }
+   
+
+   .wy-menu-vertical header, .wy-menu-vertical p.caption {
+
+      position: absolute;
+      width:100%;
+   }
+      .wy-menu-vertical header, .wy-menu-vertical p.caption {
+
+   margin-top: -20px;
+
+  }
+	.wy-menu-vertical ul{
+	margin-top :20px 
+	}
+
+   
+
+ }
+
+ @media screen and (max-width:500px) { 
+
+   .rst-breadcrumbs-buttons {
+
+      margin-top: 5px;
+      margin-right: 40px;
+   }
+   .rst-content {
+
+      margin-top: 90px;
+   }
+   .wy-menu-vertical header, .wy-menu-vertical p.caption {
+
+   margin-top: -20px;
+
+  }
+	.wy-menu-vertical ul{
+	margin-top :20px 
+	}
+
+
+
+ }

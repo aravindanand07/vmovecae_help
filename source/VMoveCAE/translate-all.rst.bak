@@ -1,0 +1,57 @@
+Translating a CAE File to CAX File
+===================================
+
+In VMoveCAE, users can translate a CAE file to CAX file in two ways: 
+
+(a) Translate all parts and results of a CAE file, or
+
+(b) Translate only the selected parts and results of a CAE file.
+
+To translate parts and results from a native CAE file to CAX file, follow the steps 
+below.  
+
+For this tutorial, LSDyna d3plot  file that is provided with VMoveCAE samples (located at “%VCOLLAB_DIR%\VMoveCAE64\Samples) is used.
+
+  #. lick the “VMoveCAE ” shortcut on your desktop to open VMoveCAE GUI.
+  #. Click on the Load Model icon to open the file browser. 
+  #. Browse and select the CAE file you wish to load. Press Enter or click Open to open the file. 
+    
+   |Browse and select CAE file|
+
+   Once the CAE file is loaded, the list of parts will appear in the **Geometry and Features** pane under the Geometry tree. The list of results will be visible in the **Results and Properties** pane under the Results tree as shown in the below image. 
+
+
+   |List of Parts and Results|
+
+  4. **(a) Translate All Parts and Results**: Click the **Save CAX** icon as shown above to translate all the parts and results from the CAE file. This will open a file save dialog box as described in step 6.
+
+     or
+
+   **(b) Translate only the Selected Parts and Results:**  By default all the results and parts are checked. To exclude any part or result from translation, uncheck the corresponding box.
+
+
+   |Check and uncheck part|
+
+  5. A result can have values at multiple instances such as multiple load cases, mode shapes, iterations, etc. To filter out instances not needed for translation, simply uncheck the respective instances.
+
+   In the example below, **‘Displacement’** is the selected result and the **‘Instance List’** pane shows instances for which this result is available.
+
+   |Selected result|
+
+  6. In the save file dialog box, browse to the desired location of the output CAX file and enter the file name as desired. Click **Save** or press enter to proceed.
+
+   Note: Users do not have write access to VMoveCAE samples directory. Choose a different folder to save the output file.
+
+   |Browse and enter CAE file name|
+
+   On clicking the Save button, VMoveCAE creates a CAX file with all or selected parts and results.A message box displaying **“Translated Successfully”** or **“Translation Failed”** will appear depending on the status of the operation.
+
+   |File Translated|
+
+.. |Browse and select CAE file| image:: images/vmovecae-model-browser.png
+.. |List of Parts and Results| image:: images/loaded-parts-and-results.png
+.. |Check and uncheck part| image:: images/check-uncheckpart.png
+.. |Selected result| image:: images/selected-result.png
+.. |Browse and enter CAE file name| image:: images/save-browser.png
+.. |File Translated| image:: images/translated.png
+

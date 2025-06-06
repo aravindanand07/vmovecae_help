@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!-- VMoveCAE - Creates cax files from native CAE files -->
+<!-- Copyright (C) Visual Collaboration Technologies Inc. -->
+<VMoveCAE>
+    <attribute key="version" value="2.0" />
+    <translation>
+        <attribute key="model file" value="G:\Models\CFD\Public\Fluent\ic3d1000\ic3d1000.cas" />
+        <attribute key="results file" value="G:\Models\CFD\Public\Fluent\ic3d1000\ic3d1000.dat" />
+        <attribute key="output file" value="G:\Models\CFD\Public\Fluent\ic3d1000\ic3d1000.cax" />
+
+        <defaults>
+            <attribute key="parts" value="filter" />
+            <attribute key="results" value="filter" />
+        </defaults>
+
+        <preferences>
+            <attribute key="mid-nodes" value="turn on" />
+        </preferences>
+
+        <part>
+            <attribute key="name" value="cyl-wall-layer" />
+            <attribute key="id" value="47" />
+        </part>
+        <part>
+            <attribute key="name" value="cyl-wall-deform" />
+            <attribute key="id" value="30" />
+        </part>
+        <part>
+            <attribute key="name" value="piston" />
+            <attribute key="translate" value="false" />
+        </part>
+
+        <result>
+            <attribute key="name" value="Pressure" />
+            <attribute key="translate" value="true" />
+        </result>
+        <result>
+            <attribute key="name" value="Temperature" />
+        </result>
+        <result>
+            <attribute key="name" value="Mach Number" />
+        </result>
+
+        <cut-section>
+            <attribute key="plane equation" value="X+2.4Y=12.4" />
+        </cut-section>
+        <iso-surface>
+            <attribute key="result" value="Velocity" />
+            <attribute key="derived type" value="Magnitude" />
+            <attribute key="value" value="20" />
+        </iso-surface>
+        <field-line>
+            <attribute key="from" value="inlet" />
+            <attribute key="result" value="Velocity" />
+            <attribute key="number of lines" value="50" />
+        </field-line>
+
+    </translation>
+</VMoveCAE>

@@ -1,0 +1,42 @@
+
+Controlling Result Properties During Batch Translation
+======================================================
+
+CAE solution files have results defined at nodes, elements and element locations. By default, VMoveCAE interpolates the nodal values and exports them into the CAX file. However, if needed, the user can specify and write elemental values for specific results to the CAX file.
+
+For example,
+
+**VMoveCAEBatch.exe --results="Displacement, Element Stress" bracket2.op2 bracket2.cax**
+
+The above command translates the results **Displacement** and **Stress.** Nodal values are written for Displacement and elemental values are written for Stress. Prefixes "Element" and "Nodal" denote that user wants to translate the elemental and nodal values respectively. Since "Nodal" is the default option, it is not necessary to specify "Nodal" explicitly. However,  this default option may change in future versions as per requirement. Hence it is recommended that users explicitly specify the "Nodal" prefix when required. 
+
+Users can also specify nodal and element results as shown below.
+
+**VMoveCAEBatch.exe --results="Displacement" --nodal-results="Reaction Force" --element-results="Stress, Element Thickness" bracket2.op2 bracket2.cax**
+
+VMoveCAE supports exporting of the element results only if the result is specified for elements or element locations in the CAE simulation results file. If the CAE simulation results contain the values specified at nodes, then VMoveCAE ignores the user preference and writes the nodal values to the CAX file.
+
+To translate all the results specified for elements and element locations to elemental results, the command line option **--default-element-results** can be used as shown below.
+
+**VMoveCAEBatch.exe --default-element-results bracket2.op2 bracket2.cax**
+
+**Averaging and Derived Types**
+
+Element results such as Stress are averaged to their nodal values before writing into the CAX file by default. For element results that are not scalars (ex: Stress is a symmetric tensor), VMoveCAE computes the **nodal averaged values** of each component and writes them to the CAX file. During visualization in VCollab viewers, the **derived** types are computed from the **averaged** component values. 
+
+When only one of the components or derived types is needed, user can specify one derived type for a result and translate values of that derived type into the CAX file. During such translations, the derived type is computed at each element or integration point first and the computed values are used for obtaining nodal averaged values that are then written to the CAX file.
+
+To export derived types, they need to be specified in the result name separated by a ‘-’.  For example, to specify Von Mises, the command would be as shown below.
+
+**VMoveCAEBatch.exe --results="Stress - Von Mises" bracket2.op2 bracket2.cax**
+
+**Controlling Sections**
+
+If the model contains shell elements, users can specify the sections for which results need to be exported as shown below.
+
+**VMovecaeBatch.exe --results="Displacement, Stress" --sections="Top, Bottom, Maximum" bracket2.op2 bracket2.cax**
+
+The above command creates a CAX file with top and bottom section for both Displacement and Stress values as well as maximum Displacement and Stress of all sections. The supported values for sections are "Top", "Bottom", "Mid", "Maximum", "Minimum" and "Average".   
+
+
+

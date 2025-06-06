@@ -1,0 +1,32 @@
+CaxInfo and CaxMerge
+==========================================
+
+VMoveCAE installation folder provides two console applications for working on CAX files that are generated from VMoveCAE. 
+ 
+**CaxInfo**
+
+         CaxInfo is a console application to extract metadata from CAX files. The metadata information includes change history of the CAX file, parts and element set information and the results available in the CAX file.  The metadata is printed on to the console by default.  The syntax for using CaxInfo is:
+
+         CaxInfo <cax_file> [output_file]
+
+**Examples**
+
+  #. The below example extracts the metadata from bracket.cax.  This information is printed to the console in XML format.
+ 
+     **CaxInfo "bracket.cax"**
+
+**CaxMerge**
+
+            CaxMerge is a console application to merge CAX data from different files. The syntax for using CaxMerge is:
+
+             **CaxMerge <files_to_merge> <output_file>**
+
+**Examples**
+
+     #. The below example merges the bracket.cax, beam.cax and cylinder.cax and writes the resultant data into merged.cax.
+
+              **CaxMerge "bracket.cax" "beam.cax" "cylinder.cax" "merged.cax"**
+
+              CaxMerge can also be used to merge viewpoint files with CAX files as shown:
+
+              **CaxMerge "bracket.cax" "bracket.vpt" "bracket-with-views.cax"**s
